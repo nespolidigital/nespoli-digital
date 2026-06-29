@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================
+   DARK MODE CUSTOM STYLES & OVERRIDES
+   ========================================= */
+
+html.dark {
+  background-color: #0f0f0f !important;
+  color: #ffffff !important;
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0f0f0f !important;
+  color: #ffffff !important;
+}
+
+/* Sections Backgrounds */
+html.dark section,
+html.dark main,
+html.dark .min-h-screen.bg-white {
+  background-color: #0f0f0f !important;
+}
+
+/* Cards & Floating Elements */
+html.dark .bg-white,
+html.dark .bg-neutral-50,
+html.dark .bg-neutral-50\/50,
+html.dark .bg-neutral-50\/40,
+html.dark .bg-neutral-50\/30 {
+  background-color: #1a1a1a !important;
+}
+
+html.dark .bg-neutral-100,
+html.dark .bg-neutral-200 {
+  background-color: #2a2a2a !important;
+}
+
+/* General Borders */
+html.dark .border,
+html.dark .border-t,
+html.dark .border-b,
+html.dark .border-l,
+html.dark .border-r,
+html.dark [class*="border-neutral-"],
+html.dark [class*="border-gray-"] {
+  border-color: #2a2a2a !important;
+}
+
+/* Header & Mobile Drawers */
+html.dark header,
+html.dark #app-header {
+  background-color: rgba(15, 15, 15, 0.8) !important;
+  border-color: #2a2a2a !important;
+}
+
+html.dark header.bg-transparent,
+html.dark #app-header.bg-transparent {
+  background-color: transparent !important;
+}
+
+html.dark #mobile-drawer {
+  background-color: #1a1a1a !important;
+  border-color: #2a2a2a !important;
+}
+
+/* Footer Element */
+html.dark footer {
+  background-color: #0f0f0f !important;
+  border-color: #2a2a2a !important;
+}
+
+/* Typography & Headings (White text in Dark mode) */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark .text-neutral-950,
+html.dark .text-neutral-900,
+html.dark .text-neutral-800,
+html.dark .text-neutral-700,
+html.dark .text-gray-950,
+html.dark .text-gray-900,
+html.dark .text-gray-800 {
+  color: #ffffff !important;
+}
+
+/* Secondary & Subtitle Text */
+html.dark p,
+html.dark .text-neutral-600,
+html.dark .text-neutral-500,
+html.dark .text-gray-600,
+html.dark .text-gray-500 {
+  color: #b3b3b3 !important;
+}
+
+/* Tertiary & Metadata Text */
+html.dark .text-neutral-400,
+html.dark .text-gray-400 {
+  color: #737373 !important;
+}
+
+/* Inputs, Textareas, and Select Fields */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #1a1a1a !important;
+  border-color: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #555555 !important;
+}
+
+/* Active Category button in Filter list */
+html.dark button.category-tab-active,
+html.dark a.category-tab-active {
+  background-color: #ffffff !important;
+  color: #0f0f0f !important;
+  border-color: #ffffff !important;
+}
+
+html.dark button.category-tab-active *,
+html.dark a.category-tab-active * {
+  color: #0f0f0f !important;
+}
+
+/* "Ver nossos apps" CTA Button in Dark Mode */
+html.dark #cta-apps {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border: 1px solid #333333 !important;
+}
+
+html.dark #cta-apps:hover {
+  background-color: #262626 !important;
+}
+
+/* Google Play Buttons in Dark Mode */
+html.dark .google-play-button {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border: 1px solid #333333 !important;
+}
+
+html.dark .google-play-button:hover {
+  background-color: #262626 !important;
+}
+
+html.dark .google-play-button svg,
+html.dark .google-play-button svg * {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+html.dark .google-play-button p,
+html.dark .google-play-button span,
+html.dark .google-play-button div {
+  color: #ffffff !important;
+}
+
+html.dark .google-play-button p.text-neutral-400 {
+  color: #a3a3a3 !important;
+}
+
+/* Interactive Action Buttons (Falar Conosco, primary actions) */
+html.dark .bg-neutral-900 {
+  background-color: #ffffff !important;
+  color: #0f0f0f !important;
+}
+
+html.dark .bg-neutral-900 * {
+  color: #0f0f0f !important;
+}
+
+html.dark .bg-neutral-900:hover {
+  background-color: #e5e5e5 !important;
+}
+
+/* CTA & Contact cards */
+html.dark .bg-neutral-950.rounded-3xl {
+  background-color: #1a1a1a !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+html.dark .bg-neutral-950.rounded-3xl h2,
+html.dark .bg-neutral-950.rounded-3xl p,
+html.dark .bg-neutral-950.rounded-3xl span:not(.font-mono),
+html.dark .bg-neutral-950.rounded-3xl div:not(.bg-white):not(.bg-neutral-900):not([class*="bg-white"]) {
+  color: #ffffff !important;
+}
+
+/* Retain high contrast for CTA white action buttons in dark cards */
+html.dark a.bg-white,
+html.dark button.bg-white,
+html.dark .bg-white[class*="hover:bg-"] {
+  background-color: #ffffff !important;
+  color: #0f0f0f !important;
+}
+
+html.dark a.bg-white *,
+html.dark button.bg-white * {
+  color: #0f0f0f !important;
+}
+
+/* Ensure white buttons and copy buttons in CTA cards have black text in dark mode */
+html.dark .bg-neutral-950.rounded-3xl a.bg-white,
+html.dark .bg-neutral-950.rounded-3xl button.bg-white,
+html.dark .bg-neutral-950.rounded-3xl .bg-neutral-900,
+html.dark .bg-neutral-950.rounded-3xl a.bg-white *,
+html.dark .bg-neutral-950.rounded-3xl button.bg-white *,
+html.dark .bg-neutral-950.rounded-3xl .bg-neutral-900 * {
+  background-color: #ffffff !important;
+  color: #0f0f0f !important;
+}
+
+/* Force high contrast dark text for any light-colored elements/badges in dark mode */
+html.dark [class*="bg-orange-5"], html.dark [class*="bg-orange-1"], html.dark [class*="bg-orange-2"],
+html.dark [class*="bg-indigo-5"], html.dark [class*="bg-indigo-1"], html.dark [class*="bg-indigo-2"],
+html.dark [class*="bg-emerald-5"], html.dark [class*="bg-emerald-1"], html.dark [class*="bg-emerald-2"],
+html.dark [class*="bg-rose-5"], html.dark [class*="bg-rose-1"], html.dark [class*="bg-rose-2"],
+html.dark [class*="bg-sky-5"], html.dark [class*="bg-sky-1"], html.dark [class*="bg-sky-2"],
+html.dark [class*="bg-teal-5"], html.dark [class*="bg-teal-1"], html.dark [class*="bg-teal-2"],
+html.dark [class*="bg-amber-5"], html.dark [class*="bg-amber-1"], html.dark [class*="bg-amber-2"],
+html.dark [class*="bg-green-1"], html.dark [class*="bg-blue-1"], html.dark [class*="bg-yellow-1"], html.dark [class*="bg-red-1"] {
+  color: #111111 !important;
+}
+
+html.dark [class*="bg-orange-5"] *, html.dark [class*="bg-orange-1"] *, html.dark [class*="bg-orange-2"] *,
+html.dark [class*="bg-indigo-5"] *, html.dark [class*="bg-indigo-1"] *, html.dark [class*="bg-indigo-2"] *,
+html.dark [class*="bg-emerald-5"] *, html.dark [class*="bg-emerald-1"] *, html.dark [class*="bg-emerald-2"] *,
+html.dark [class*="bg-rose-5"] *, html.dark [class*="bg-rose-1"] *, html.dark [class*="bg-rose-2"] *,
+html.dark [class*="bg-sky-5"] *, html.dark [class*="bg-sky-1"] *, html.dark [class*="bg-sky-2"] *,
+html.dark [class*="bg-teal-5"] *, html.dark [class*="bg-teal-1"] *, html.dark [class*="bg-teal-2"] *,
+html.dark [class*="bg-amber-5"] *, html.dark [class*="bg-amber-1"] *, html.dark [class*="bg-amber-2"] *,
+html.dark [class*="bg-green-1"] *, html.dark [class*="bg-blue-1"] *, html.dark [class*="bg-yellow-1"] *, html.dark [class*="bg-red-1"] * {
+  color: #111111 !important;
+}
+
+/* Preserve original style for dynamic phone frames and notch */
+html.dark .border-neutral-900,
+html.dark [class*="border-neutral-900"] {
+  border-color: #171717 !important;
+}
+
+html.dark .bg-neutral-950:not(.rounded-3xl) {
+  background-color: #0a0a0a !important;
+}
+
+/* Small visual dots alignment (logo, footer, bullet items) */
+html.dark .rounded-full.bg-neutral-950 {
+  background-color: #ffffff !important;
+}

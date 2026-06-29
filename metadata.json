@@ -1,0 +1,6 @@
+{
+  "name": "Nespoli Digital",
+  "description": "Landing page de Nespoli Digital, empresa de desenvolvimento de aplicativos e soluções digitais minimalistas e profissionais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
